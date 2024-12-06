@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box !important;
+    transition: ease all 0.5s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #666666;
+    font-size: 14px;
+    font-family: Poppins !important;
+    line-height: 1.80857;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+.footer_section {
+    width: 100%;
+    float: left;
+    background-color: #252525;
+    height: auto;
+    padding-bottom: 50px;
+    box-shadow: 0px 24px 19px -1px #222223;
+    position: relative;
+}
+
+.layout_padding {
+    padding-top: 3rem;
+    padding-bottom: 0px;
+}
+
+.footer_logo {
+    width: 80%;
+    float: left;
+    padding: 0px 0px 30px 0px;
+}
+
+.adderss_text {
+    width: 100%;
+    float: left;
+    font-size: 24px;
+    color: #ffffff;
+    padding-bottom: 30px;
+}
+
+.header_section {
+    width: 100%;
+    float: left;    
+    /* background-image: url(../images/banner-bg.png); */
+    background-color: rgba(96, 197, 255, 0.76);
+    height: auto;
+    background-size: 100%;
+    padding: 0x 0px 25px 0px;
+    background-repeat: no-repeat;
+}
+
+.navbar-collapse{
+    top: 0;
+/*     background-color: rgb(96, 198, 255); */
+}
+
+.hiphop_text_1 {
+    width: 90%;
+    color: #d6d6d6;
+    font-size: 16px;
+    margin-left: 0px;
+}
+
+.Useful_text {
+    width: 50%;
+    color: #d6d6d6;
+    font-size: 16px;
+    margin-left: 0px;
+}
+
+
+.map_icon {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #d6d6d6;
+    padding-bottom: 10px;
+}
+
+.paddlin_left_0 {
+    padding-left: 15px;
+}
+
+.carousel-item{
+    max-height: 65vh;
+}
+ 
+.carousel-item img{
+    object-fit: cover;
+    object-position: left top;
+    
+}
+
+.contact_section {
+    width: 100%;
+    float: left;
+    background-color: rgba(96, 197, 255, 0.76);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 150px;
+}
