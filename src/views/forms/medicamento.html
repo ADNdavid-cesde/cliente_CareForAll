@@ -40,7 +40,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Pacientes</a></li>
                                 <li><a class="dropdown-item" href="#">Medicos</a></li>
-                                <li><a class="dropdown-item" href="#">Medicamentos</a></li>
+                                <li><a class="dropdown-item disabled">Medicamentos</a></li>
                                 <li><a class="dropdown-item" href="#">Enfermedades</a></li>
                                 <li><a class="dropdown-item" href="#">Signos vitales</a></li>
                             </ul>
@@ -53,7 +53,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Pacientes</a></li>
                                 <li><a class="dropdown-item" href="#">Medicos</a></li>
-                                <li><a class="dropdown-item" href="#">Medicamentos</a></li>
+                                <li><a class="dropdown-item" href="../dashboard/medicamentoDashboard.html">Medicamentos</a></li>
                                 <li><a class="dropdown-item" href="#">Enfermedades</a></li>
                                 <li><a class="dropdown-item" href="#">Signos vitales</a></li>
                             </ul>
@@ -70,7 +70,7 @@
     <!--form-->
     <main class="container-fluid position-relative">
         <div class="container position-absolute mx-md-5  border rounded-4 shadow p-4 bg-body-tertiary">
-            <h2 class="text-center">Registrate aqui</h2>
+            <h2 class="text-center">Registrar Medicamento</h2>
             <form class="text-center mt-4 ">
                 <ul class="row">
                     <li class="col-5 list-group-item mx-4">
@@ -98,17 +98,16 @@
                             <span class="input-group-text rounded-start-pill bg-danger-subtle">
                                 <i class="material-icons">call</i>
                             </span>
-                            <input id="dosisMedicamento" type="text" placeholder="Dosis"
+                            <input id="dosisMedicamento" type="number" placeholder="Dosis"
                                 class="rounded-end-pill form-control">
                         </div>
                     </li>
-
                     <li class="col-5 list-group-item mx-4">
                         <div class="input-group mb-3">
                             <span class="input-group-text rounded-start-pill bg-info-subtle">
                                 <i class="material-icons">email</i>
                             </span>
-                            <input id="laboratorioMedicamento" type="email" placeholder="Laboratorio"
+                            <input id="laboratorioMedicamento" type="text" placeholder="Laboratorio"
                                 class="rounded-end-pill form-control">
                         </div>
                     </li>
@@ -119,7 +118,7 @@
                             <span class="input-group-text rounded-start-pill bg-danger-subtle">
                                 <i class="material-icons">local_hospital</i>
                             </span>
-                            <input id="ipspaciente" type="text" placeholder="Contra Indicacciones" class="rounded-end-pill form-control">
+                            <input id="contraindicacionesMedicamento" type="text" placeholder="Contra Indicacciones" class="rounded-end-pill form-control">
                         </div>
                     </li>
                     <li class="col-5 list-group-item mx-4">
@@ -127,7 +126,7 @@
                             <span class="input-group-text rounded-start-pill bg-info-subtle">
                                 <i class="material-icons">request_quote</i>
                             </span>
-                            <input id="grupoingresospaciente" type="text" placeholder="Registro Invima"
+                            <input id="registroMedicamento" type="text" placeholder="Registro Invima"
                                 class="rounded-end-pill form-control">
                         </div>
                     </li>
@@ -138,7 +137,7 @@
                             <span class="input-group-text rounded-start-pill bg-danger-subtle">
                                 <i class="material-icons">perm_contact_calendar</i>
                             </span>
-                            <input id="nacimientopaciente" type="date" placeholder="Fecha De Caducidad" title="Fecha nacimiento"
+                            <input id="fechaCaducidadMedicamento" type="date" placeholder="Fecha De Caducidad" title="Fecha nacimiento"
                                 class="rounded-end-pill form-control">
                         </div>
                     </li>
@@ -146,13 +145,13 @@
                 <ul class="row align-items-center">
                     <li class="col-5 list-group-item mx-4 ps-5 border rounded-pill">
                         <div class="form-check form-switch container text-start">
-                            <input class="form-check-input my-2" type="checkbox" role="switch" id="polizapaciente">
-                            <label class="form-check-label my-2" for="flexSwitchCheckDefault">¿Tiene Copago?</label>
+                            <input class="form-check-input my-2" type="checkbox" role="switch" id="tieneCopago">
+                            <label class="form-check-label my-2" for="flexSwitchCheckDefault">¿Requiere Copago?</label>
                         </div>
                     </li>
                     <li class="col-5 list-group-item mx-4 ">
                         <button type="button" class="btn btn-primary rounded-pill w-100"
-                            id="botonregistropaciente">enviar</button>
+                            id="botonRegistroMedicamento">enviar</button>
                     </li>
                 </ul>
             </form>
