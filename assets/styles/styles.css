@@ -16,6 +16,7 @@ body {
     line-height: 1.80857;
     font-weight: normal;
     overflow-x: hidden;
+    
 }
 
 .footer_section {
@@ -56,6 +57,7 @@ body {
     background-size: 100%;
     padding: 0x 0px 25px 0px;
     background-repeat: no-repeat;
+    
 }
 
 .navbar-collapse{
@@ -108,3 +110,12 @@ body {
     background-repeat: no-repeat;
     padding-bottom: 150px;
 }
+
+main > div.container{
+    margin-top: 150px;
+    top: 20px !important;
+    
+}
+
+
+
