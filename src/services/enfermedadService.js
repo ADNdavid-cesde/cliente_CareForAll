@@ -1,44 +1,44 @@
-const URL = "http://localhost:8080/api/medicamento";
+const URL = "http://localhost:8080/api/enfermedad";
 
-export async function traerMedicamentos() {
+export async function traerEnfermedades() {
     let peticionGET = {
         method: "GET",
     };
 
     let respuestaServidor = await fetch(URL, peticionGET);
-    let medicamentos = await respuestaServidor.json();
-    return medicamentos;
+    let enfermedades = await respuestaServidor.json();
+    return enfermedades;
 }
 
-export async function guardarMedicamento(nuevoMedicamento) {
+export async function guardarEnfermedad(nuevaEnfermedad) {
     let peticionPOST = {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(nuevoMedicamento),
+        body: JSON.stringify(nuevaEnfermedad),
     };
 
     let respuestaServidor = await fetch(URL, peticionPOST);
-    let medicamento = await respuestaServidor.json();
-    return medicamento;
+    let enfermedad = await respuestaServidor.json();
+    return enfermedad;
 }
 
-/* export async function actualizarMedicamento(medicamento, id) {
+/* export async function actualizarEnfermedad(enfermedad, id) {
   let peticionPUT = {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(medicamento),
+    body: JSON.stringify(enfermedad),
   };
 
   let respuestaServidor = await fetch(URL + "/" + id, peticionPUT);
-  let medicamentoActualizado = await respuestaServidor.json();
-  return medicamentoActualizado;
+  let enfermedadActualizada = await respuestaServidor.json();
+  return enfermedadActualizada;
 }
 
-export async function eliminarMedicamento(id) {
+export async function eliminarEnfermedad(id) {
   let peticionDELETE = {
     method: "DELETE",
   };
@@ -48,12 +48,12 @@ export async function eliminarMedicamento(id) {
   return respuesta;
 }
 
-export async function traerMedicamento(id) {
+export async function traerEnfermedad(id) {
   let peticionGET = {
     method: "GET",
   };
 
   let respuestaServidor = await fetch(URL + "/" + id, peticionGET);
-  let medicamento = await respuestaServidor.json();
-  return medicamento;
+  let enfermedad = await respuestaServidor.json();
+  return enfermedad;
 } */
