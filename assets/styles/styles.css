@@ -24,21 +24,21 @@ body {
     float: left;
     background-color: #252525;
     height: auto;
-    padding-bottom: 50px;
+    padding-bottom: 3rem;
     box-shadow: 0px 24px 19px -1px #222223;
     position: relative;
 }
 
 .layout_padding {
     padding-top: 3rem;
-    padding-bottom: 0px;
+    padding-bottom: 3rem;
 }
 
-.footer_logo {
+/* .footer_logo {
     width: 80%;
     float: left;
     padding: 0px 0px 30px 0px;
-}
+} */
 
 .adderss_text {
     width: 100%;
@@ -117,5 +117,186 @@ main > div.container{
     
 }
 
+.Useful_text ul,
+.Useful_text li,
+.Useful_text ol {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    width: 100%;
+}
 
+.Useful_text ul{
+    margin-bottom: 1rem;
+}
 
+.Useful_text li, .Useful_text a{
+    width: 100%;
+}
+
+.Useful_text a {
+    color: #d6d6d6;
+    text-decoration: none;
+    outline: none !important;    
+}
+
+.news_section {
+    width: 100%;
+    float: left;
+    padding-bottom: 90px;
+}
+
+.news_section_2 {
+    width: 100%;
+    float: left;
+}
+
+.health_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #252525;
+    font-weight: bold;
+}
+
+.health_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #252525;
+    margin: 0px;
+}
+
+.news_section {
+    width: 100%;
+    float: left;
+    padding-bottom: 90px;
+}
+
+.news_section_2 {
+    width: 100%;
+    float: left;
+}
+
+.box_main {
+    width: 100%;
+    float: left;
+    background-color: #252525;
+    height: auto;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.box_main:hover {
+    background-color: rgba(96, 197, 255, 0.76);
+}
+
+.box_main.active {
+    background-color:  rgba(96, 197, 255, 0.76);
+}
+
+.box_main.active:hover {
+    background-color:  #252525;
+}
+
+.icon_1 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-bottom: 20px;
+    line-height: 95px;
+}
+
+.daily_text {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+    color: #fff;
+    line-height: 30px;
+}
+
+.daily_text_1 {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+    color: #fff;
+    line-height: 30px;
+    padding-bottom: 40px;
+}
+
+.getquote_bt {
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.getquote_bt a {
+    width: 100%;
+    float: left;
+    font-size: 18px;
+    color: #ffffff;
+    background-color:  rgba(96, 197, 255, 0.76);
+    padding: 7px 0px;
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: none;
+}
+
+.getquote_bt a:hover {
+    background-color: #252525;
+}
+
+.knowledge_section {
+    width: 100%;
+    float: left;
+    background-color: rgba(96, 197, 255, 0.76);
+    background-image: url(../images/img-1.png);
+    /* background-size: 30%; */
+    height: auto;
+    background-repeat: no-repeat;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    object-fit: scale-down;
+    /* object-position: top 25% right 2%; */
+}
+
+.knowledge_main {
+    width: 100%;
+    float: left;
+    right: 0;
+}
+
+.left_main {
+    width: 40%;
+    float: left;
+}
+
+.right_main {
+    width: 60%;
+    float: left;
+    right: 0;
+    text-align: end;
+    margin-left: 5rem;
+}
+
+.knowledge_taital {
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.knowledge_text {
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: #ffffff;
+    margin: 0px;
+}
