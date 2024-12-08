@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <link
       rel="shortcut icon"
-      href="assets/images/CareForAll_icon.png"
+      href="./assets/images/CareForAll_icon.png"
       type="image/x-icon"
     />
     <link
@@ -17,6 +17,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
     <!-- header section start -->
@@ -54,11 +55,11 @@
                   Registrar
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Pacientes</a></li>
-                  <li><a class="dropdown-item" href="#">Medicos</a></li>
-                  <li><a class="dropdown-item" href="#">Medicamentos</a></li>
-                  <li><a class="dropdown-item" href="#">Enfermedades</a></li>
-                  <li><a class="dropdown-item" href="#">Signos vitales</a></li>                 
+                  <li><a class="dropdown-item" href="./src/views/forms/paciente.html">Pacientes</a></li>
+                  <li><a class="dropdown-item" href="./src/views/forms/medico.html">Medicos</a></li>
+                  <li><a class="dropdown-item" href="./src/views/forms/medicamento.html">Medicamentos</a></li>
+                  <li><a class="dropdown-item" href="./src/views/forms/enfermedad.html">Enfermedades</a></li>
+                  <li><a class="dropdown-item" href="./src/views/forms/signoVital.html">Signos vitales</a></li>                 
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -72,11 +73,11 @@
                   Gestionar
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Pacientes</a></li>
-                  <li><a class="dropdown-item" href="#">Medicos</a></li>
-                  <li><a class="dropdown-item" href="#">Medicamentos</a></li>
-                  <li><a class="dropdown-item" href="#">Enfermedades</a></li>
-                  <li><a class="dropdown-item" href="#">Signos vitales</a></li>              
+                  <li><a class="dropdown-item" href="./src/views/dashboard/pacienteDashboard.html">Pacientes</a></li>
+                  <li><a class="dropdown-item" href="./src/views/dashboard/medicoDashboard.html">Medicos</a></li>
+                  <li><a class="dropdown-item" href="./src/views/dashboard/medicamentoDashboard.html">Medicamentos</a></li>
+                  <li><a class="dropdown-item" href="./src/views/dashboard/enfermedadDashboard.html">Enfermedades</a></li>
+                  <li><a class="dropdown-item" href="./src/views/dashboard/signoVitalDashboard.html">Signos vitales</a></li>              
                 </ul>
               </li>
               <li class="nav-item">
@@ -212,7 +213,7 @@
     <div class="knowledge_section layout_padding">
       <div class="container">
         <div class="knowledge_main">
-          <div class="left_main">
+          <div class="right_main">
             <h1 class="knowledge_taital">Knowledge of center</h1>
             <p class="knowledge_text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -220,10 +221,7 @@
               enim ad minim veniam
             </p>
           </div>
-          <div class="right_main">
-            <div class="play_icon">
-              <a href="#"><img src="images/play-icon.png" /></a>
-            </div>
+          <div class="left_main">            
           </div>
         </div>
       </div>
@@ -240,27 +238,27 @@
           <div class="row">
             <div class="col-lg-4 col-sm-6">
               <div class="box_main">
-                <div class="icon_1"><img src="images/icon-2.png" /></div>
+                <div class="icon_1"><img src="./assets/images/icon-2.png" /></div>
                 <h4 class="daily_text">Cuidado diario con expertos</h4>
               </div>
             </div>
             <div class="col-lg-4 col-sm-6">
               <div class="box_main active">
-                <div class="icon_1"><img src="images/icon-3.png" /></div>
+                <div class="icon_1"><img src="./assets/images/icon-3.png" /></div>
                 <h4 class="daily_text_1">Disponible 24/7</h4>
               </div>
             </div>
             <div class="col-lg-4 col-sm-6">
               <div class="box_main">
-                <div class="icon_1"><img src="images/icon-4.png" /></div>
+                <div class="icon_1"><img src="./assets/images/icon-4.png" /></div>
                 <h4 class="daily_text_1">Cuidado balanceado</h4>
               </div>
             </div>
           </div>
         </div>
         <div class="getquote_bt">
-          <a href="#"
-            >Get A Quote <span><img src="images/right-arrow.png" /></span
+          <a href="./src/views/forms/signoVital.html"
+            >Registra tus signos vitales <span><img src="./assets/images/right-arrow.png" /></span
           ></a>
         </div>
       </div>
@@ -296,25 +294,25 @@
     <div class="footer_section layout_padding">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-sm-6">            
+          <div class="col-lg-4 col-sm-6">            
             <h1 class="adderss_text">Contáctenos</h1>
             <div class="map_icon">
-              <img src="images/map-icon.png" /><span class="paddlin_left_0"
+              <img src="./assets/images/map-icon.png" /><span class="paddlin_left_0"
                 >Page when looking at its</span
               >
             </div>
             <div class="map_icon">
-              <img src="images/call-icon.png" /><span class="paddlin_left_0"
+              <img src="./assets/images/call-icon.png" /><span class="paddlin_left_0"
                 >+7586656566</span
               >
             </div>
             <div class="map_icon">
-              <img src="images/mail-icon.png" /><span class="paddlin_left_0"
+              <img src="./assets/images/mail-icon.png" /><span class="paddlin_left_0"
                 >volim@gmail.com</span
               >
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-4 col-sm-6">
             <h1 class="adderss_text">Doctores</h1>
             <div class="hiphop_text_1">
               There are many variations of passages of Lorem Ipsum available,
@@ -322,14 +320,18 @@
               injected humour,
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-4 col-sm-6">
             <h1 class="adderss_text">Enlaces útiles</h1>
             <div class="Useful_text">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered ,
+              <ul class="">
+                <li><a href="./src/views/forms/paciente.html">Registrar Pacientes</a></li>
+                <li><a href="./src/views/forms/medico.html">Registrar Medicos</a></li>
+                <li><a href="./src/views/forms/signoVital.html">Registrar Signos vitales</a></li>
+                <li><a href="./src/views/dashboard/pacienteDashboard.html">Gestionar Pacientes</a></li>
+                <li><a href="./src/views/dashboard/medicoDashboard.html">Gestionar Medicos</a></li>
+              </ul>
             </div>
-          </div>
-          
+          </div>          
         </div>
       </div>
     </div>
