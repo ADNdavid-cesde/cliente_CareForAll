@@ -39,22 +39,22 @@ cuerpoTabla.addEventListener("click", (event) => {
 })
 
 function mostrarEnfermedadModal(id) {
-    let nombreEnfermedad = document.getElementById("nombreEnfermedad")
-    let sintomasEnfermedad = document.getElementById("sintomasEnfermedad")
-    let clasificacionEnfermedad = document.getElementById("clasificacionEnfermedasd")
-    let gradoEnfermdad = document.getElementById("gradoEnfermedad")
-    let probabilidadVida = document.getElementById("probabilidadDeVida")
+    let nombreEnfermedadInput = document.getElementById("nombreEnfermedad")
+    let sintomasEnfermedadInput = document.getElementById("sintomasEnfermedad")
+    let clasificacionEnfermedadInput = document.getElementById("clasificacionEnfermedasd")
+    let gradoEnfermdadInput = document.getElementById("gradoEnfermedad")
+    let probabilidadVidaInput= document.getElementById("probabilidadDeVida")
 
 
     traerEnfermedades()
         .then(function (respuestaBack) {
             console.log(respuestaBack);
             let enfermedad = respuestaBack.find((enfermedad) => enfermedad.id == id);
-            nombreEnfermedad.textContent = enfermedad.nombre;
-            sintomasEnfermedad.value = enfermedad.sintomas;
-            clasificacionEnfermedad.value = enfermedad.clasificacion;
-            gradoEnfermdad.value = enfermedad.grado;
-            probabilidadVida.value = enfermedad.probabilidadVida;
+            nombreEnfermedadInput.textContent = enfermedad.nombre;
+            sintomasEnfermedadInput.value = enfermedad.sintomas;
+            clasificacionEnfermedadInput.value = enfermedad.clasificacion;
+            gradoEnfermdadInput.value = enfermedad.grado;
+            probabilidadVidaInput.value = enfermedad.probavilidadVida;
         })
         .catch(function (error) {
             console.error(error);

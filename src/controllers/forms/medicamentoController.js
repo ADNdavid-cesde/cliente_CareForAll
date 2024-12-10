@@ -27,13 +27,13 @@ botonRegistroMedicamento.addEventListener("click", function (evento) {
 
     console.dir(datosFormularioMedicamento);
     console.error(validarDatos())
-    if (validarDatos(datosFormularioMedicamento)) {
+    if (validarDatos()) {
         guardarMedicamento(datosFormularioMedicamento)
             .then((respuesta) => {
                 console.log(respuesta);
                 Swal.fire({
                     title: "Registro exitoso",
-                    text: "Ya eres parte de nuestra gran familia",
+                    text: "Se ha ingresado un medicamento",
                     icon: "success",
                 });
             })
