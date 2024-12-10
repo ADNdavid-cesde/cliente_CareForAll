@@ -51,15 +51,15 @@
                                 Gestionar
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./pacienteDashboard.html">Pacientes</a></li>
-                                <li><a class="dropdown-item disabled">Medicos</a></li>
+                                <li><a class="dropdown-item disabled">Pacientes</a></li>
+                                <li><a class="dropdown-item" href="./medicoDashboard.html">Medicos</a></li>
                                 <li><a class="dropdown-item " href="./medicamentoDashboard.html">Medicamentos</a></li>
                                 <li><a class="dropdown-item" href="./enfermedadDashboard.html">Enfermedades</a></li>
                                 <li><a class="dropdown-item" href="./signoVitalDashboard.html">Signos vitales</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-disabled="true"  href="../../../index.html#accordionDesarrolladores">Desarrolladores</a>
+                            <a class="nav-link" aria-disabled="true" href="../../../index.html#accordionDesarrolladores">Desarrolladores</a>
                         </li>
                     </ul>
                 </div>
@@ -70,15 +70,15 @@
     <!--Tabla dashboard-->
     <main class="container-fluid position-relative">
         <div class="container position-absolute mx-md-5  border rounded-4 shadow p-4 bg-body-tertiary table-responsive">
-            <h2 class="text-center mb-4">Medicos</h2>
+            <h2 class="text-center mb-4">Pacientes</h2>
             <table class="table table-striped table-hover table-sm">
                 <caption></caption>
                 <thead>
                     <tr class="text-center">
                         <th scope="col">Nombre</th>
-                        <th scope="col">Especialidad</th>
                         <th scope="col">IPS</th>
-                        <th scope="col">Teléfono</th>
+                        <th scope="col">Grupo ingresos</th>
+                        <th scope="col">Fecha afiliación</th>
                     </tr>
                 </thead>
                 <tbody class="text-center">
@@ -94,7 +94,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-danger fw-bolder text-white">
-                    <h1 class="modal-title fs-5" id="nombremedico"></h1>
+                    <h1 class="modal-title fs-5" id="nombrePaciente"></h1>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
@@ -103,58 +103,58 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-7">
-                                    <div class="container">
+                                    <div class="container">                                       
                                         <div class="row my-3">
                                             <div class="col-6">
                                                 <label class="form-label">Teléfono:</label>
-                                                <input disabled class="form-control" type="text" id="telefonomedico">
+                                                <input disabled class="form-control" type="text" id="telefonoPaciente">
                                             </div>
                                             <div class="col-6">
                                                 <label class="form-label">Correo:</label>
-                                                <input disabled class="form-control" type="text" id="correomedico">
-                                            </div>
-                                        </div>
-                                        <div class="row my-3">
-                                            <div class="col-6">
-                                                <label class="form-label">Matricula profesional:</label>
-                                                <input disabled class="form-control" type="text" id="matriculamedico">
-                                            </div>
-                                            <div class="col-6">
-                                                <label class="form-label">Especialidad:</label>
                                                 <input disabled class="form-control" type="text"
-                                                    id="especialidadmedico">
+                                                    id="correoPaciente">
                                             </div>
                                         </div>
                                         <div class="row my-3">
                                             <div class="col-6">
-                                                <label class="form-label">Salario:</label>
-                                                <input disabled class="form-control" type="text" id="salariomedico">
+                                                <label class="form-label">Grupo de ingresos:</label>
+                                                <input disabled class="form-control" type="text" id="grupoIngresosPaciente">
                                             </div>
 
                                             <div class="col-6">
                                                 <label class="form-label">IPS:</label>
-                                                <input disabled class="form-control" type="text" id="ipsmedico">
+                                                <input disabled class="form-control" type="text" id="ipsPaciente">
+                                            </div>
+                                        </div>
+                                        <div class="row my-3">
+                                            <div class="col-6">
+                                                <label class="form-label">Fecha de nacimiento:</label>
+                                                <input disabled class="form-control" type="text" id="nacimientoPaciente">
+                                            </div>
+
+                                            <div class="col-6">
+                                                <label class="form-label">Fecha de afiliación:</label>
+                                                <input disabled class="form-control" type="text" id="afiliacionPaciente">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-6">
-                                                <label class="form-label">Dirección:</label>
-                                                <input disabled class="form-control" type="text" id="direccionmedico">
-                                            </div>
-                                            <div class="col-6">
                                                 <div class="form-check form-switch ms-2">
                                                     <input disabled class="form-check-input" type="checkbox"
-                                                        role="switch" id="disponibilidadmedico">
-                                                    <label class="form-label" for="disponibilidadmedico">¿Disponible
-                                                        el fin de semana?</label>
-                                                </div>
+                                                        role="switch" id="polizaPaciente">
+                                                    <label class="form-label" for="polizaPaciente">¿Tiene póliza activa?</label>
+                                                </div>                                                
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="form-label">Ciudad:</label>
+                                                <input disabled class="form-control" type="text" id="ciudadPaciente">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-5 card">
-                                    <label class="form-label">Pacientes a cargo:</label>
-                                    <ul class="list-group list-group-flush" id="listaPacientes"></ul>
+                                    <label class="form-label">Signos vitales registrados:</label>
+                                    <ul class="list-group list-group-flush" id="listaSignosVitales"></ul>
                                 </div>
                             </div>
                         </div>
@@ -171,7 +171,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="../../controllers/dashboards/medicoDashboardController.js" type="module"></script>
+    <script src="../../controllers/dashboards/pacienteDashboardController.js" type="module"></script>
 </body>
 
 </html>
