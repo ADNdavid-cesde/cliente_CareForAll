@@ -23,8 +23,8 @@ botonRegistrarMedico.addEventListener("click", (evento) => {
     ips:ipsMedico.value,
     correo:correoMedico.value,
     telefono:telefonoMedico.value,
-    direccion:direccionMedico.value,
-    disponibleFinDeSemana: disponibleFinDeSemanaMedico.checked
+    direccionConsultorio:direccionMedico.value,
+    finDeSemanaDisponible: disponibleFinDeSemanaMedico.checked
     };
 
     console.dir(medico);
