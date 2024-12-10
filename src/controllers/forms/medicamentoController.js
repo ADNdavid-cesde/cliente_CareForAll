@@ -33,7 +33,7 @@ botonRegistroMedicamento.addEventListener("click", function (evento) {
                 console.log(respuesta);
                 Swal.fire({
                     title: "Registro exitoso",
-                    text: "Ya eres parte de nuestra gran familia",
+                    text: "Se ha ingresado un medicamento",
                     icon: "success",
                 });
             })
