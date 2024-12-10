@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <link
       rel="shortcut icon"
-      href="assets/images/CareForAll_icon.png"
+      href="./assets/images/CareForAll_icon.png"
       type="image/x-icon"
     />
     <link
@@ -17,13 +17,14 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
     <!-- header section start -->
     <div class="header_section">
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand"
             ><div class="logo">
               <img src="./assets/images/CareForAll_logo.png" width="100" /></div
           ></a>
@@ -41,7 +42,7 @@
           <div class="collapse navbar-collapse align-self-center" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link disabled" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link disabled" aria-current="page">Inicio</a>
               </li>          
               <li class="nav-item dropdown">
                 <a
@@ -54,11 +55,11 @@
                   Registrar
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Pacientes</a></li>
-                  <li><a class="dropdown-item" href="#">Medicos</a></li>
-                  <li><a class="dropdown-item" href="#">Medicamentos</a></li>
-                  <li><a class="dropdown-item" href="#">Enfermedades</a></li>
-                  <li><a class="dropdown-item" href="#">Signos vitales</a></li>                 
+                  <li><a class="dropdown-item" href="./src/views/forms/paciente.html">Pacientes</a></li>
+                  <li><a class="dropdown-item" href="./src/views/forms/medico.html">Medicos</a></li>
+                  <li><a class="dropdown-item" href="./src/views/forms/medicamento.html">Medicamentos</a></li>
+                  <li><a class="dropdown-item" href="./src/views/forms/enfermedad.html">Enfermedades</a></li>
+                  <li><a class="dropdown-item" href="./src/views/forms/signoVital.html">Signos vitales</a></li>                 
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -72,62 +73,41 @@
                   Gestionar
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Pacientes</a></li>
-                  <li><a class="dropdown-item" href="#">Medicos</a></li>
-                  <li><a class="dropdown-item" href="#">Medicamentos</a></li>
-                  <li><a class="dropdown-item" href="#">Enfermedades</a></li>
-                  <li><a class="dropdown-item" href="#">Signos vitales</a></li>              
+                  <li><a class="dropdown-item" href="./src/views/dashboard/pacienteDashboard.html">Pacientes</a></li>
+                  <li><a class="dropdown-item" href="./src/views/dashboard/medicoDashboard.html">Medicos</a></li>
+                  <li><a class="dropdown-item" href="./src/views/dashboard/medicamentoDashboard.html">Medicamentos</a></li>
+                  <li><a class="dropdown-item" href="./src/views/dashboard/enfermedadDashboard.html">Enfermedades</a></li>
+                  <li><a class="dropdown-item" href="./src/views/dashboard/signoVitalDashboard.html">Signos vitales</a></li>              
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Desarrolladores</a>
+                <a class="nav-link" aria-disabled="true" href="#accordionDesarrolladores">Desarrolladores</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <!-- header section end -->
+
       <!-- banner section start -->
       <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
-        </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="./assets/images/medicos_carrusel2.avif" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block text-black fw-semibold">
-              <h5>Toma de signos vitales</h5>
+            <img src="./assets/images/medicos_carrusel2.avif" class="d-block w-100 opacity-75" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-black fw-semibold">Toma de signos vitales</h5>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="./assets/images/meddicos_carrusel.jpg" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block text-black fw-semibold">
-              <h5>Cuidado puntual y especializado</h5>             
+            <img src="./assets/images/meddicos_carrusel.jpg" class="d-block w-100 opacity-75" alt="..." />
+            <div class="carousel-caption d-none d-md-block text-primary-emphasis fw-semibold">
+              <h5 class="text-black fw-semibold">Cuidado puntual y especializado</h5>             
             </div>
           </div>
           <div class="carousel-item">
-            <img src="assets/images/medicos_carrusel3.avif" class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block text-black fw-semibold">
-              <h5>Diagnósticos tempranos</h5>              
+            <img src="assets/images/medicos_carrusel3.avif" class="d-block w-100 opacity-75" alt="..." />
+            <div class="carousel-caption d-none d-md-block text-primary-emphasis fw-semibold">
+              <h5 class="text-black fw-semibold">Diagnósticos tempranos</h5>              
             </div>
           </div>
         </div>
@@ -168,7 +148,7 @@
               <div class="image_main">
                 <div class="main">
                   <img
-                    src="images/img-2.png"
+                    src="./assets/images/importancia-cuidado-salud.jpg"
                     alt="Avatar"
                     class="image"
                     style="width: 100%"
@@ -176,7 +156,9 @@
                 </div>
                 <div class="middle">
                   <div class="text">
-                    <img src="images/icon-1.png" style="width: 40px" />
+                    <a href="./src/views/forms/enfermedad.html">
+                      <img src="./assets/images/icon-6.png" style="width: 40px" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -185,7 +167,7 @@
               <div class="image_main_1">
                 <div class="main">
                   <img
-                    src="images/img-3.png"
+                    src="./assets/images/What-Is-Home-Care-1-scaled.jpg"
                     alt="Avatar"
                     class="image"
                     style="width: 100%"
@@ -193,46 +175,42 @@
                 </div>
                 <div class="middle">
                   <div class="text">
-                    <img src="images/icon-1.png" style="width: 40px" />
+                    <a href="./src/views/forms/paciente.html">
+                      <img src="./assets/images/icon-7.png" style="width: 40px" />
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="getquote_bt_1">
-            <a href="#"
-              >Read More <span><img src="images/right-arrow.png" /></span
-            ></a>
-          </div>
         </div>
       </div>
     </div>
     <!-- health section end -->
+
     <!-- knowledge section end -->
     <div class="knowledge_section layout_padding">
       <div class="container">
         <div class="knowledge_main">
-          <div class="left_main">
-            <h1 class="knowledge_taital">Knowledge of center</h1>
+          <div class="right_main">
+            <h1 class="knowledge_taital">Diagnósticos tempranos</h1>
             <p class="knowledge_text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam
             </p>
           </div>
-          <div class="right_main">
-            <div class="play_icon">
-              <a href="#"><img src="images/play-icon.png" /></a>
-            </div>
+          <div class="left_main">            
           </div>
         </div>
       </div>
     </div>
     <!-- knowledge section end -->
+
     <!-- news section start -->
     <div class="news_section layout_padding">
       <div class="container">
-        <h1 class="health_taital">Why choose 24hr home care</h1>
+        <h1 class="health_taital">¿Por que elegirnos?</h1>
         <p class="health_text">
           labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
@@ -240,81 +218,114 @@
           <div class="row">
             <div class="col-lg-4 col-sm-6">
               <div class="box_main">
-                <div class="icon_1"><img src="images/icon-2.png" /></div>
+                <div class="icon_1"><img src="./assets/images/icon-2.png" /></div>
                 <h4 class="daily_text">Cuidado diario con expertos</h4>
               </div>
             </div>
             <div class="col-lg-4 col-sm-6">
               <div class="box_main active">
-                <div class="icon_1"><img src="images/icon-3.png" /></div>
+                <div class="icon_1"><img src="./assets/images/icon-3.png" /></div>
                 <h4 class="daily_text_1">Disponible 24/7</h4>
               </div>
             </div>
             <div class="col-lg-4 col-sm-6">
               <div class="box_main">
-                <div class="icon_1"><img src="images/icon-4.png" /></div>
+                <div class="icon_1"><img src="./assets/images/icon-4.png" /></div>
                 <h4 class="daily_text_1">Cuidado balanceado</h4>
               </div>
             </div>
           </div>
         </div>
         <div class="getquote_bt">
-          <a href="#"
-            >Get A Quote <span><img src="images/right-arrow.png" /></span
+          <a href="./src/views/forms/signoVital.html"
+            >Registra tus signos vitales <span><img src="./assets/images/right-arrow.png" /></span
           ></a>
         </div>
       </div>
     </div>
     <!-- news section end -->
-    <!-- contact section start -->
+
+    <!-- Developer section start -->
     <div class="contact_section layout_padding">
       <div class="container">
-        <h1 class="contact_taital">Que hacemos</h1>
-        <div class="news_section_2">
-          <div class="row">
-            <div class="col-md-6">
-              <div class="icon_main">
-                <div class="icon_7"><img src="images/icon-7.png" /></div>
-                <h4 class="diabetes_text">Diabetes and obesity Counselling</h4>
+        <h1 class="contact_taital text-white fw-bolder">Desarrolladores</h1>
+        <div class="accordion" id="accordionDesarrolladores">
+          <div class="accordion-item bg-transparent border-0 text-white">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Anderson David Sepúlveda Gómez
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionDesarrolladores">
+              <div class="accordion-body">
+                El Product Owner es responsable de definir y priorizar las características y tareas del producto. Su principal objetivo es asegurar que el equipo esté trabajando en las cosas que más valor generen para el negocio, manteniendo actualizado el Product Backlog.
               </div>
-              <div class="icon_main">
-                <div class="icon_7"><img src="images/icon-5.png" /></div>
-                <h4 class="diabetes_text">Obstetrics and Gynsecology</h4>
+            </div>
+          </div>
+          <div class="accordion-item bg-transparent border-0 text-white">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Joan Sebastian Caballero Quiñones
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDesarrolladores">
+              <div class="accordion-body">
+                El Scrum Master actúa como facilitador del equipo Scrum. Su rol es asegurar que el equipo siga las prácticas y principios de Scrum, eliminando obstáculos que puedan surgir, y promoviendo una comunicación efectiva y la mejora continua dentro del equipo..
               </div>
-              <div class="icon_main">
-                <div class="icon_7"><img src="images/icon-6.png" /></div>
-                <h4 class="diabetes_text">Surgical and medical Oncology</h4>
+            </div>
+          </div>
+          <div class="accordion-item bg-transparent border-0 text-white">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Carlos Andres Bolivar Berrio
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionDesarrolladores">
+              <div class="accordion-body">
+                Como desarrollador, Carlos se encarga de escribir el código, diseñar las soluciones técnicas y colaborar en la implementación de las funcionalidades del producto. Su principal objetivo es asegurar que las historias de usuario sean entregadas con calidad en cada Sprint.
               </div>
-            </div>            
+            </div>
+          </div>
+          <div class="accordion-item bg-transparent border-0 text-white">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-transparent text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourth" aria-expanded="false" aria-controls="collapseFourth">
+                Santiago Mejia Garcia
+              </button>
+            </h2>
+            <div id="collapseFourth" class="accordion-collapse collapse" data-bs-parent="#accordionDesarrolladores">
+              <div class="accordion-body">
+                Al igual que el otro desarrollador, Santiago es responsable de la implementación técnica de las tareas y de asegurar que el código sea entregado conforme a las especificaciones y los estándares de calidad del equipo. Trabaja de manera colaborativa para alcanzar los objetivos del Sprint.
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- contact section end -->
+    <!-- developer section end -->
    
     <!-- footer section start -->
     <div class="footer_section layout_padding">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-sm-6">            
+          <div class="col-lg-4 col-sm-6">            
             <h1 class="adderss_text">Contáctenos</h1>
             <div class="map_icon">
-              <img src="images/map-icon.png" /><span class="paddlin_left_0"
+              <img src="./assets/images/map-icon.png" /><span class="paddlin_left_0"
                 >Page when looking at its</span
               >
             </div>
             <div class="map_icon">
-              <img src="images/call-icon.png" /><span class="paddlin_left_0"
+              <img src="./assets/images/call-icon.png" /><span class="paddlin_left_0"
                 >+7586656566</span
               >
             </div>
             <div class="map_icon">
-              <img src="images/mail-icon.png" /><span class="paddlin_left_0"
+              <img src="./assets/images/mail-icon.png" /><span class="paddlin_left_0"
                 >volim@gmail.com</span
               >
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-4 col-sm-6">
             <h1 class="adderss_text">Doctores</h1>
             <div class="hiphop_text_1">
               There are many variations of passages of Lorem Ipsum available,
@@ -322,14 +333,18 @@
               injected humour,
             </div>
           </div>
-          <div class="col-lg-3 col-sm-6">
+          <div class="col-lg-4 col-sm-6">
             <h1 class="adderss_text">Enlaces útiles</h1>
             <div class="Useful_text">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered ,
+              <ul class="">
+                <li><a href="./src/views/forms/paciente.html">Registrar Pacientes</a></li>
+                <li><a href="./src/views/forms/medico.html">Registrar Medicos</a></li>
+                <li><a href="./src/views/forms/signoVital.html">Registrar Signos vitales</a></li>
+                <li><a href="./src/views/dashboard/pacienteDashboard.html">Gestionar Pacientes</a></li>
+                <li><a href="./src/views/dashboard/medicoDashboard.html">Gestionar Medicos</a></li>
+              </ul>
             </div>
-          </div>
-          
+          </div>          
         </div>
       </div>
     </div>
