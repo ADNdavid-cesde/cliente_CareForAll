@@ -1,13 +1,21 @@
 import { traerEnfermedades } from "../../services/enfermedadService.js"
 
 document.addEventListener("DOMContentLoaded", () => {
+    let captionTabla = document.querySelector("caption");
     traerEnfermedades()
         .then(function (respuestaBack) {
             console.log(respuestaBack)
             mostrarTabla(respuestaBack);
+            if (respuestaBack.length != 0) {
+                captionTabla.innerHTML = "Da click en la fila para ver detalles";
+              } else {
+                captionTabla.innerHTML = "La tabla no cuenta con registros";
+              }
         })
         .catch(function (error) {
             console.error(error);
+            captionTabla.innerHTML =
+        "Hubo un error al traer la información desde el servidor 😕";
         })
 })
 
@@ -54,7 +62,7 @@ function mostrarEnfermedadModal(id) {
             sintomasEnfermedadInput.value = enfermedad.sintomas;
             clasificacionEnfermedadInput.value = enfermedad.clasificacion;
             gradoEnfermdadInput.value = enfermedad.grado;
-            probabilidadVidaInput.value = enfermedad.probavilidadVida;
+            probabilidadVidaInput.value = enfermedad.probabilidadVida;
         })
         .catch(function (error) {
             console.error(error);

@@ -55,3 +55,13 @@ function validarDatos() {
         return false
     }
 }
+
+fechaCaducidadMedicamento.type = "text";
+fechaCaducidadMedicamento.addEventListener("focus", ()=>{
+    fechaCaducidadMedicamento.type = "date";
+  });
+  fechaCaducidadMedicamento.addEventListener("blur", ()=>{
+    if (fechaCaducidadMedicamento.value == "") {
+        fechaCaducidadMedicamento.type = "text";    
+    }
+  });

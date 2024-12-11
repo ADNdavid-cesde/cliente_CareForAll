@@ -16,7 +16,7 @@ botonRegistroEnfermedad.addEventListener("click", function(evento) {
         sintomas: sintomasEnfermedad.value,
         clasificacion: clasificacionEnfermedad.value,
         grado: gradoEnfermdad.value,
-        probavilidadVida: probabilidadVida.value
+        probabilidadVida: probabilidadVida.value
     }
 
     console.dir(datosFormularioEnfermedad);

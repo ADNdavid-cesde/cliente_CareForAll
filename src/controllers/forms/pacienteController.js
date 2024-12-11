@@ -1,14 +1,16 @@
-import{traerPacientes,guardarPaciente} from '../../services/pacienteService.js'
+import{guardarPaciente} from '../../services/pacienteService.js';
+import{traerMedicos} from '../../services/medicoService.js';
 
 let nombrePaciente = document.getElementById("nombrepaciente");
-let nacimietoPaciente = document.getElementById("nacimientopaciente");
+let nacimientoPaciente = document.getElementById("nacimientopaciente");
 let ciudadPaciente = document.getElementById("ciudadpaciente");
 let correoPaciente = document.getElementById("correopaciente");
 let telefonoPaciente = document.getElementById("telefonopaciente");
 let ipsPaciente = document.getElementById("ipspaciente");
 let grupoIngresosPaciente = document.getElementById("grupoingresospaciente");
-let afiliacionPaciente = document.getElementById("afiiacionpaciente");
+let afiliacionPaciente = document.getElementById("afiliacionpaciente");
 let polizaPaciente = document.getElementById("polizapaciente");
+let selectMedicoResponsable = document.getElementById("nombreMedicoResponsable");
 
 let botonRegistrarPaciente = document.getElementById("botonregistropaciente");
 
@@ -17,7 +19,7 @@ botonRegistrarPaciente.addEventListener("click", (evento) => {
 
   let paciente = {
     nombre: nombrePaciente.value, 
-    anioNacimiento: nacimietoPaciente.value,
+    anioNacimiento: nacimientoPaciente.value,
     ciudad: ciudadPaciente.value,
     correo: correoPaciente.value,
     telefono: telefonoPaciente.value,
@@ -25,6 +27,9 @@ botonRegistrarPaciente.addEventListener("click", (evento) => {
     poliza: polizaPaciente.checked,
     grupoIngresos: grupoIngresosPaciente.value,
     fechaAfiliacion: afiliacionPaciente.value,
+    medico:{
+      id: selectMedicoResponsable.value,
+    }
   };
 
   
@@ -48,7 +53,7 @@ botonRegistrarPaciente.addEventListener("click", (evento) => {
 });
 
 function validarDatos(){
-    if (nombrePaciente.value != "" && correoPaciente.value != "" && telefonoPaciente.value != "") {
+    if (nombrePaciente.value != "" && correoPaciente.value != "" && telefonoPaciente.value != "" && selectMedicoResponsable.value != "") {
         return true
     }else{
         Swal.fire({
@@ -59,3 +64,39 @@ function validarDatos(){
         return false
     }
 }
+
+document.addEventListener("DOMContentLoaded", () =>{
+  traerMedicos()
+  .then((respuesta)=>{
+      respuesta.forEach((medico)=>{
+          let optionMedico = document.createElement("option");
+          optionMedico.textContent = medico.nombre;
+          optionMedico.value = medico.id;
+
+          selectMedicoResponsable.appendChild(optionMedico);
+      });
+  })
+  .catch((error) => {
+      console.log(error);
+    });
+});
+
+nacimientoPaciente.type = "text";
+nacimientoPaciente.addEventListener("focus", ()=>{
+  nacimientoPaciente.type = "date";
+});
+nacimientoPaciente.addEventListener("blur", ()=>{
+  if (nacimientoPaciente.value == "") {
+    nacimientoPaciente.type = "text";    
+  }
+});
+
+afiliacionPaciente.type = "text";
+afiliacionPaciente.addEventListener("focus", ()=>{
+  afiliacionPaciente.type = "date";
+});
+afiliacionPaciente.addEventListener("blur", ()=>{
+  if (afiliacionPaciente.value == "") {
+    afiliacionPaciente.type = "text";    
+  }
+});

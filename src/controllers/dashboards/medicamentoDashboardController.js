@@ -1,13 +1,21 @@
 import { traerMedicamentos } from "../../services/medicamentoService.js"
 
 document.addEventListener("DOMContentLoaded", () => {
+    let captionTabla = document.querySelector("caption");
     traerMedicamentos()
         .then(function (respuestaBack) {
             console.log(respuestaBack)
             mostrarTabla(respuestaBack);
+            if (respuestaBack.length != 0) {
+                captionTabla.innerHTML = "Da click en la fila para ver detalles";
+              } else {
+                captionTabla.innerHTML = "La tabla no cuenta con registros";
+              }
         })
         .catch(function (error) {
             console.error(error);
+            captionTabla.innerHTML =
+        "Hubo un error al traer la información desde el servidor 😕";
         })
 })
 

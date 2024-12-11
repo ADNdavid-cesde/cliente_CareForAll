@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -115,7 +115,7 @@
                         </div>
                     </li>
                 </ul>
-                <ul class="row">
+                <ul class="row align-items-center">
                     <li class="col-5 list-group-item mx-4">
                         <div class="input-group mb-3">
                             <span class="input-group-text rounded-start-pill bg-danger-subtle">
@@ -127,12 +127,15 @@
                     <li class="col-5 list-group-item mx-4">
                         <div class="input-group mb-3">
                             <span class="input-group-text rounded-start-pill bg-info-subtle">
-                                <i class="material-icons">request_quote</i>
+                                <i class="material-icons">person_search</i>
                             </span>
-                            <input id="grupoingresospaciente" type="text" placeholder="Grupo Ingresos"
-                                class="rounded-end-pill form-control">
+                            <select id="nombreMedicoResponsable" type="text" placeholder="Nombre Del Paciente"
+                                class="rounded-end-pill form-select">
+                                <option selected>Selecciona medico responsable</option>
+                            </select>
                         </div>
-                    </li>
+                    </li> 
+                    
                 </ul>
                 <ul class="row">
                     <li class="col-5 list-group-item mx-4">
@@ -140,7 +143,7 @@
                             <span class="input-group-text rounded-start-pill bg-danger-subtle">
                                 <i class="material-icons">perm_contact_calendar</i>
                             </span>
-                            <input id="nacimientopaciente" type="date" placeholder="Nacimiento" title="Fecha nacimiento"
+                            <input id="nacimientopaciente" type="date" title="Fecha nacimiento" placeholder="Fecha nacimiento"
                                 class="rounded-end-pill form-control">
                         </div>
                     </li>
@@ -149,23 +152,33 @@
                             <span class="input-group-text rounded-start-pill bg-info-subtle">
                                 <i class="material-icons">calendar_month</i>
                             </span>
-                            <input id="afiiacionpaciente" type="date" placeholder="Afiliacion"
+                            <input id="afiliacionpaciente" type="date" title="Fecha afiliación" placeholder="Fecha afiliación"
                                 class="rounded-end-pill form-control">
                         </div>
                     </li>
                 </ul>
-                <ul class="row align-items-center">
+                <ul class="row">
+                    <li class="col-5 list-group-item mx-4">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text rounded-start-pill bg-danger-subtle">
+                                <i class="material-icons">request_quote</i>
+                            </span>
+                            <input id="grupoingresospaciente" type="text" placeholder="Grupo Ingresos"
+                                class="rounded-end-pill form-control">
+                        </div>
+                    </li>
+                    <li class="col-5 list-group-item mx-4 ">
+                        <button type="button" class="btn btn-primary rounded-pill w-100"
+                            id="botonregistropaciente">Enviar</button>
+                    </li>             
+                </ul>
+                <ul class="row">
                     <li class="col-5 list-group-item mx-4 ps-5 border rounded-pill">
                         <div class="form-check form-switch container text-start">
                             <input class="form-check-input my-2" type="checkbox" role="switch" id="polizapaciente">
                             <label class="form-check-label my-2" for="flexSwitchCheckDefault">¿Tiene póliza?</label>
                         </div>
                     </li>
-                    <li class="col-5 list-group-item mx-4 ">
-                        <button type="button" class="btn btn-primary rounded-pill w-100"
-                            id="botonregistropaciente">Enviar</button>
-                    </li>
-
                 </ul>
             </form>
 

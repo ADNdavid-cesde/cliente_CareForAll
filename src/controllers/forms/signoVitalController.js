@@ -15,7 +15,9 @@ botonRegistrarMedico.addEventListener("click", (evento) => {
         nombre: inputNombreSignoVital.value,
         valor: inputValor.value,
         fechaMedida: inputFechaToma.value,
-        fk_paciente: inputPaciente.value
+        paciente:{
+          id: inputPaciente.value
+        } 
     };
 
     console.dir(signoVital);
@@ -66,3 +68,13 @@ document.addEventListener("DOMContentLoaded", () =>{
         console.log(error);
       });
 });
+
+inputFechaToma.type = "text";
+inputFechaToma.addEventListener("focus", ()=>{
+  inputFechaToma.type = "date";
+});
+inputFechaToma.addEventListener("blur", ()=>{
+  if (inputFechaToma.value == "") {
+    inputFechaToma.type = "text";    
+  }
+}); 

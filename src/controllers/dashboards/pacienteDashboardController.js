@@ -77,10 +77,10 @@ function mostrarPacienteModal(id) {
       polizaPacienteInput.checked = paciente.poliza;
 
       if (paciente.signosVitales.length != 0) {
-        paciente.signosVitales.forEach((paciente) => {
+        paciente.signosVitales.forEach((signoVital) => {
           let item = document.createElement("li");
           item.classList.add("list-group-item");
-          item.textContent = paciente.nombre;
+          item.textContent = signoVital.nombre + " -> " + signoVital.valor;
 
           listadoSignosVitales.appendChild(item);
         });
