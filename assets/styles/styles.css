@@ -65,6 +65,10 @@ body {
 /*     background-color: rgb(96, 198, 255); */
 }
 
+.nav{
+    z-index: 5 !important;
+}
+
 .hiphop_text_1 {
     width: 90%;
     color: #d6d6d6;

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mostrarTabla(respuestaBack);
       if (respuestaBack.length != 0) {
         captionTabla.innerHTML = "Da click en la fila para ver detalles";
+        buscarInput.removeAttribute("disabled");
       } else {
         captionTabla.innerHTML = "La tabla no cuenta con registros";
       }
@@ -64,4 +65,28 @@ function mostrarSignoVitalModal(id) {
     .catch(function (error) {
       console.error(error);
     });
+}
+
+let buscarInput = document.querySelector("#buscar");
+
+buscarInput.addEventListener("keyup", () => {
+  filtrarTabla(buscarInput.value);
+});
+
+async function filtrarTabla(filtro) {
+  try {
+    let datosPrevios = await traerSignosVitales();
+
+    if (datosPrevios != null) {
+      let signosVitalesCoincidencia = datosPrevios.filter((signoVital) => {
+        return (
+          signoVital.nombre.toLowerCase().includes(filtro.toLowerCase()) == true
+        );
+      });
+      console.log(signosVitalesCoincidencia);
+      mostrarTabla(signosVitalesCoincidencia);
+    }
+  } catch (error) {
+    console.error(error);
+  }
 }

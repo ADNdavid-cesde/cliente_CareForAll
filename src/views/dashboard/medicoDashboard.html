@@ -59,7 +59,8 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-disabled="true"  href="../../../index.html#accordionDesarrolladores">Desarrolladores</a>
+                            <a class="nav-link" aria-disabled="true"
+                                href="../../../index.html#accordionDesarrolladores">Desarrolladores</a>
                         </li>
                     </ul>
                 </div>
@@ -71,6 +72,12 @@
     <main class="container-fluid position-relative">
         <div class="container position-absolute mx-md-5  border rounded-4 shadow p-4 bg-body-tertiary table-responsive">
             <h2 class="text-center mb-4">Medicos</h2>
+            <div class="col-12 mb-4"> <!--Barra de búsqueda-->
+                <form class="p-4 border rounded bg-body-secondary mt-5">
+                    <input type="text" class="buscar form-control" id="buscar" disabled
+                        placeholder="Buscar por nombre" />
+                </form>
+            </div>
             <table class="table table-striped table-hover table-sm">
                 <caption></caption>
                 <thead>
@@ -153,7 +160,7 @@
                                     </div>
                                 </div>
                                 <div class="col-5 card">
-                                    <label class="form-label">Pacientes a cargo:</label>
+                                    <label class="form-label fw-semibold">Pacientes a cargo:</label>
                                     <ul class="list-group list-group-flush" id="listaPacientes"></ul>
                                 </div>
                             </div>

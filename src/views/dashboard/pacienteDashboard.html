@@ -59,7 +59,8 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-disabled="true" href="../../../index.html#accordionDesarrolladores">Desarrolladores</a>
+                            <a class="nav-link" aria-disabled="true"
+                                href="../../../index.html#accordionDesarrolladores">Desarrolladores</a>
                         </li>
                     </ul>
                 </div>
@@ -71,6 +72,12 @@
     <main class="container-fluid position-relative">
         <div class="container position-absolute mx-md-5  border rounded-4 shadow p-4 bg-body-tertiary table-responsive">
             <h2 class="text-center mb-4">Pacientes</h2>
+            <div class="col-12 mb-4"> <!--Barra de búsqueda-->
+                <form class="p-4 border rounded bg-body-secondary mt-5">
+                    <input type="text" class="buscar form-control" id="buscar" disabled
+                        placeholder="Buscar por nombre" />
+                </form>
+            </div>
             <table class="table table-striped table-hover table-sm">
                 <caption></caption>
                 <thead>
@@ -103,7 +110,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-7">
-                                    <div class="container">                                       
+                                    <div class="container">
                                         <div class="row my-3">
                                             <div class="col-6">
                                                 <label class="form-label">Teléfono:</label>
@@ -111,14 +118,14 @@
                                             </div>
                                             <div class="col-6">
                                                 <label class="form-label">Correo:</label>
-                                                <input disabled class="form-control" type="text"
-                                                    id="correoPaciente">
+                                                <input disabled class="form-control" type="text" id="correoPaciente">
                                             </div>
                                         </div>
                                         <div class="row my-3">
                                             <div class="col-6">
                                                 <label class="form-label">Grupo de ingresos:</label>
-                                                <input disabled class="form-control" type="text" id="grupoIngresosPaciente">
+                                                <input disabled class="form-control" type="text"
+                                                    id="grupoIngresosPaciente">
                                             </div>
 
                                             <div class="col-6">
@@ -129,12 +136,14 @@
                                         <div class="row my-3">
                                             <div class="col-6">
                                                 <label class="form-label">Fecha de nacimiento:</label>
-                                                <input disabled class="form-control" type="text" id="nacimientoPaciente">
+                                                <input disabled class="form-control" type="text"
+                                                    id="nacimientoPaciente">
                                             </div>
 
                                             <div class="col-6">
                                                 <label class="form-label">Fecha de afiliación:</label>
-                                                <input disabled class="form-control" type="text" id="afiliacionPaciente">
+                                                <input disabled class="form-control" type="text"
+                                                    id="afiliacionPaciente">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -142,8 +151,9 @@
                                                 <div class="form-check form-switch ms-2">
                                                     <input disabled class="form-check-input" type="checkbox"
                                                         role="switch" id="polizaPaciente">
-                                                    <label class="form-label" for="polizaPaciente">¿Tiene póliza activa?</label>
-                                                </div>                                                
+                                                    <label class="form-label" for="polizaPaciente">¿Tiene póliza
+                                                        activa?</label>
+                                                </div>
                                             </div>
                                             <div class="col-6">
                                                 <label class="form-label">Ciudad:</label>
@@ -153,7 +163,7 @@
                                     </div>
                                 </div>
                                 <div class="col-5 card">
-                                    <label class="form-label">Signos vitales registrados:</label>
+                                    <label class="form-label fw-semibold">Signos vitales registrados:</label>
                                     <ul class="list-group list-group-flush" id="listaSignosVitales"></ul>
                                 </div>
                             </div>
