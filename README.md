@@ -1,4 +1,4 @@
-# CareFor All
+# CareForAll
 
 Es el proyecto integrador para los cursos de FrontEnd, BackEnd y Metodologías Ágiles para la programación impartido por el **CESDE**. Este proyecto consiste, en una aplicación web que permite el registro de pacientes, médicos, medicamentos, enfermedades y signos vitales. Adicionalmente se puede consultar el listado de registros para cada entidad.
 
@@ -16,14 +16,14 @@ Es el proyecto integrador para los cursos de FrontEnd, BackEnd y Metodologías �
 
 ### Que aprendimos
 
-- Manipulación del **DOM** y **Eventos** para alterar el comportamiento de la vista (formulario o Dashboars).
+- Manipulación del **DOM** y **Eventos** para alterar el comportamiento de la vista (formulario o Dashboard).
 - Empleo de funciones flecha.
-- Consumo de Apis mediante Fecth, manejo de promesas con async/await y tambien then/catch.
+- Consumo de Apis mediante Fetch, manejo de promesas con async/await y también then/catch.
 
 
 ## Autores
 
-- GitHub: [@ADNdavid](https://github.com/ADNdavid) - LinkedIn: [Anderson Sepúlveda](https://www.linkedin.com/in/adndavid/)
-- GitHub: [@santiago2003-rgb](https://github.com/santiago2003-rgb)
-- GitHub: [@Carlboli](https://github.com/Carlboli)
-- GitHub: [Joan Caballero](https://github.com/)
+- Anderson Sepúlveda: [@ADNdavid](https://github.com/ADNdavid) - LinkedIn: [Anderson Sepúlveda](https://www.linkedin.com/in/adndavid/)
+- Santiago Mejia: [@santiago2003-rgb](https://github.com/santiago2003-rgb)
+- Carlos bolivar: [@Carlboli](https://github.com/Carlboli)
+- Joan Caballero: [@Jscbllero](https://github.com/Jscbllero)
